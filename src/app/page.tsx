@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <h1>Password Generator</h1>
       <div className='result'>
-        <p className='password'></p>
+        <input className='password' placeholder='P4$5W0rD!' disabled />
         <div className='copy'>
           <Image src={iconCopy} alt='copy password' />
         </div>
@@ -15,7 +15,7 @@ export default function Home() {
       <form>
         <div className='character-length'>
           <label htmlFor='length'>
-            <span>Character Length</span>
+            <span>Character Length </span>
             <span>10</span>
           </label>
           <input type='range' id='length' min='5' max='30' className='slider' />
