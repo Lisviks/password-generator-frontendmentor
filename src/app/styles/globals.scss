@@ -168,4 +168,87 @@ form {
       transform: rotate(45deg);
     }
   }
+
+  .strength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: $very-dark-grey;
+
+    p:first-child {
+      color: $grey;
+    }
+
+    p:last-child {
+      display: flex;
+      align-items: center;
+      color: $light-grey;
+
+      span {
+        display: flex;
+        height: 1.75rem;
+
+        div {
+          height: 1.75rem;
+          width: 0.625rem;
+          border: 2px solid $light-grey;
+          margin-left: 0.5rem;
+
+          &:first-child {
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      &.too-weak {
+        div:first-child {
+          border: none;
+          background-color: $red;
+        }
+      }
+
+      &.weak {
+        div:first-child,
+        div:nth-child(2) {
+          border: none;
+          background-color: $orange;
+        }
+      }
+      &.medium {
+        div:first-child,
+        div:nth-child(2),
+        div:nth-child(3) {
+          border: none;
+          background-color: $yellow;
+        }
+      }
+      &.strong {
+        div {
+          border: none;
+          background-color: $green;
+        }
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    color: $dark-grey;
+    height: 3.5rem;
+    background-color: $green;
+
+    img {
+      margin-left: 1rem;
+    }
+  }
 }

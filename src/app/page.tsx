@@ -42,8 +42,14 @@ export default function Home() {
         </div>
         <div className='strength'>
           <p>Strength</p>
-          <p>
-            Medium <span></span>
+          <p className='medium'>
+            Medium
+            <span>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </span>
           </p>
         </div>
         <button type='submit'>
