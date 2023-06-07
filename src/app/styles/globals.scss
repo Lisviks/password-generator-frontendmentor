@@ -60,6 +60,15 @@ h1 {
     top: 50%;
     right: 1rem;
     transform: translateY(-50%);
+
+    svg {
+      fill: $green;
+
+      &:hover {
+        cursor: pointer;
+        fill: #fff;
+      }
+    }
   }
 }
 
@@ -108,6 +117,12 @@ form {
         border-radius: 50%;
         border: 2px solid $light-grey;
         background-color: $light-grey;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $very-dark-grey;
+          border-color: $green;
+        }
       }
 
       &::-moz-range-thumb {
@@ -116,6 +131,12 @@ form {
         border-radius: 50%;
         border: 2px solid $light-grey;
         background-color: $light-grey;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $very-dark-grey;
+          border-color: $green;
+        }
       }
     }
   }
@@ -166,6 +187,11 @@ form {
       border: solid $very-dark-grey;
       border-width: 0 3px 3px 0;
       transform: rotate(45deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-color: $green;
     }
   }
 
@@ -247,8 +273,20 @@ form {
     height: 3.5rem;
     background-color: $green;
 
-    img {
+    svg {
       margin-left: 1rem;
+      fill: $dark-grey;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $green;
+      background-color: $dark-grey;
+      color: $green;
+
+      svg {
+        fill: $green;
+      }
     }
   }
 }

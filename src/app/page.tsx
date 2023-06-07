@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import iconCopy from '../../public/images/icon-copy.svg';
-import arrowRight from '../../public/images/icon-arrow-right.svg';
+import IconCopy from './IconCopy';
+import IconArrowRight from './IconArrowRight';
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
       <div className='result'>
         <input className='password' placeholder='P4$5W0rD!' disabled />
         <div className='copy'>
-          <Image src={iconCopy} alt='copy password' />
+          <IconCopy />
         </div>
       </div>
       <form>
@@ -53,7 +52,7 @@ export default function Home() {
           </p>
         </div>
         <button type='submit'>
-          Generate <Image src={arrowRight} alt='arrow right' />
+          Generate <IconArrowRight />
         </button>
       </form>
     </main>
