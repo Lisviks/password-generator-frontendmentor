@@ -45,15 +45,15 @@ export default function Home() {
         </div>
         <div className='strength'>
           <p>Strength</p>
-          <p className='medium'>
+          <div className='medium'>
             Medium
-            <span>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </span>
-          </p>
+            <p>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+          </div>
         </div>
         <button type='submit'>
           Generate <IconArrowRight />
