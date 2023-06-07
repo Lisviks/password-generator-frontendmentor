@@ -20,24 +20,28 @@ export default function Home() {
           <input type='range' id='length' min='5' max='30' className='slider' />
         </div>
         <div className='uppercase'>
-          <input type='checkbox' id='uppercase' />
-          <span className='checkmark'></span>
-          <label htmlFor='uppercase'>Include Uppercase Letters</label>
+          <label htmlFor='uppercase'>
+            <input type='checkbox' id='uppercase' />
+            <span className='checkmark'></span>Include Uppercase Letters
+          </label>
         </div>
         <div className='lowercase'>
-          <input type='checkbox' id='lowercase' />
-          <span className='checkmark'></span>
-          <label htmlFor='lowercase'>Include Lowercase Letters</label>
+          <label htmlFor='lowercase'>
+            <input type='checkbox' id='lowercase' />
+            <span className='checkmark'></span>Include Lowercase Letters
+          </label>
         </div>
         <div className='numbers'>
-          <input type='checkbox' id='numbers' />
-          <span className='checkmark'></span>
-          <label htmlFor='numbers'>Include Numbers</label>
+          <label htmlFor='numbers'>
+            <input type='checkbox' id='numbers' />
+            <span className='checkmark'></span>Include Numbers
+          </label>
         </div>
         <div className='symbols'>
-          <input type='checkbox' id='symbols' />
-          <span className='checkmark'></span>
-          <label htmlFor='symbols'>Include Symbols</label>
+          <label htmlFor='symbols'>
+            <input type='checkbox' id='symbols' />
+            <span className='checkmark'></span>Include Symbols
+          </label>
         </div>
         <div className='strength'>
           <p>Strength</p>
