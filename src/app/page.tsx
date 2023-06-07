@@ -1,5 +1,6 @@
 import IconCopy from './IconCopy';
 import IconArrowRight from './IconArrowRight';
+import CharLength from './CharLength';
 
 export default function Home() {
   return (
@@ -12,13 +13,7 @@ export default function Home() {
         </div>
       </div>
       <form>
-        <div className='character-length'>
-          <label htmlFor='length'>
-            <span>Character Length </span>
-            <span>10</span>
-          </label>
-          <input type='range' id='length' min='5' max='30' className='slider' />
-        </div>
+        <CharLength />
         <div className='uppercase'>
           <label htmlFor='uppercase'>
             <input type='checkbox' id='uppercase' />
