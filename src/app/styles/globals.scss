@@ -107,7 +107,7 @@ form {
     margin-bottom: 1rem;
 
     &:first-child {
-      margin-bottom: 0;
+      margin-bottom: 2.6rem;
     }
   }
 
@@ -248,6 +248,73 @@ form {
 
       svg {
         fill: $green;
+      }
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  main {
+    width: 540px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .result {
+    margin-bottom: 1.5rem;
+
+    .password {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  form {
+    padding: 1.5rem 2rem 2rem;
+
+    label {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      margin-left: 2.75rem;
+    }
+
+    .character-length {
+      p {
+        margin-bottom: 1.5rem;
+
+        span {
+          &:last-child {
+            font-size: 2rem;
+            line-height: 2.6rem;
+            color: $green;
+          }
+        }
+      }
+    }
+
+    div {
+      margin-bottom: 1.25rem;
+    }
+
+    .strength {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      padding: 1.5rem 2rem;
+    }
+
+    button {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      height: 4rem;
+      margin-top: 1rem;
+
+      svg {
+        margin-left: 1.5rem;
       }
     }
   }
