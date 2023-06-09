@@ -1,18 +1,26 @@
 'use client';
 
 import { Slider } from '@mui/material';
+import { useState } from 'react';
 
 export default function CharLength() {
+  const [charLength, setCharLength] = useState<number>(10);
+
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    setCharLength(newValue as number);
+  };
+
   return (
     <div className='character-length'>
       <p>
         <span>Character Length </span>
-        <span>10</span>
+        <span>{charLength}</span>
       </p>
       <Slider
         min={5}
         max={30}
-        defaultValue={10}
+        value={charLength}
+        onChange={handleChange}
         sx={{
           color: '#a4ffaf',
           borderRadius: 0,
