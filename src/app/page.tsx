@@ -1,6 +1,7 @@
 import IconCopy from './IconCopy';
 import IconArrowRight from './IconArrowRight';
 import CharLength from './CharLength';
+import PasswordOption from './PasswordOption';
 
 export default function Home() {
   return (
@@ -14,30 +15,10 @@ export default function Home() {
       </div>
       <form>
         <CharLength />
-        <div className='uppercase'>
-          <label htmlFor='uppercase'>
-            <input type='checkbox' id='uppercase' />
-            <span className='checkmark'></span>Include Uppercase Letters
-          </label>
-        </div>
-        <div className='lowercase'>
-          <label htmlFor='lowercase'>
-            <input type='checkbox' id='lowercase' />
-            <span className='checkmark'></span>Include Lowercase Letters
-          </label>
-        </div>
-        <div className='numbers'>
-          <label htmlFor='numbers'>
-            <input type='checkbox' id='numbers' />
-            <span className='checkmark'></span>Include Numbers
-          </label>
-        </div>
-        <div className='symbols'>
-          <label htmlFor='symbols'>
-            <input type='checkbox' id='symbols' />
-            <span className='checkmark'></span>Include Symbols
-          </label>
-        </div>
+        <PasswordOption text='Include Uppercase Letters' />
+        <PasswordOption text='Include Lowercase Letters' />
+        <PasswordOption text='Include Numbers' />
+        <PasswordOption text='Include Symbols' />
         <div className='strength'>
           <p>Strength</p>
           <div className='medium'>
