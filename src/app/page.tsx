@@ -1,7 +1,5 @@
 import IconCopy from './IconCopy';
-import IconArrowRight from './IconArrowRight';
-import CharLength from './CharLength';
-import PasswordOption from './PasswordOption';
+import Form from './Form';
 
 export default function Home() {
   return (
@@ -13,28 +11,7 @@ export default function Home() {
           <IconCopy />
         </div>
       </div>
-      <form>
-        <CharLength />
-        <PasswordOption text='Include Uppercase Letters' />
-        <PasswordOption text='Include Lowercase Letters' />
-        <PasswordOption text='Include Numbers' />
-        <PasswordOption text='Include Symbols' />
-        <div className='strength'>
-          <p>Strength</p>
-          <div className='medium'>
-            Medium
-            <p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </p>
-          </div>
-        </div>
-        <button type='submit'>
-          Generate <IconArrowRight />
-        </button>
-      </form>
+      <Form />
     </main>
   );
 }
