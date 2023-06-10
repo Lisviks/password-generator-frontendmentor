@@ -3,9 +3,14 @@
 import IconArrowRight from './IconArrowRight';
 import CharLength from './CharLength';
 import PasswordOption from './PasswordOption';
-import React, { FormEventHandler } from 'react';
+import React, { useState } from 'react';
 
 export default function Form() {
+  const [uppercase, setUppercase] = useState(true);
+  const [lowercase, setLowercase] = useState(true);
+  const [number, setNumber] = useState(true);
+  const [symbol, setSymbol] = useState(true);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
@@ -13,10 +18,10 @@ export default function Form() {
   return (
     <form onSubmit={handleSubmit}>
       <CharLength />
-      <PasswordOption text='Include Uppercase Letters' />
-      <PasswordOption text='Include Lowercase Letters' />
-      <PasswordOption text='Include Numbers' />
-      <PasswordOption text='Include Symbols' />
+      <PasswordOption text='Include Uppercase Letters' checked={uppercase} setState={setUppercase} />
+      <PasswordOption text='Include Lowercase Letters' checked={lowercase} setState={setLowercase} />
+      <PasswordOption text='Include Numbers' checked={number} setState={setNumber} />
+      <PasswordOption text='Include Symbols' checked={symbol} setState={setSymbol} />
       <div className='strength'>
         <p>Strength</p>
         <div className='medium'>
