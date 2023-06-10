@@ -1,13 +1,16 @@
 'use client';
 
 import { Slider } from '@mui/material';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
-export default function CharLength() {
-  const [charLength, setCharLength] = useState<number>(10);
+interface Props {
+  charLength: number;
+  setState: Dispatch<SetStateAction<number>>;
+}
 
+export default function CharLength({ charLength, setState }: Props) {
   const handleChange = (event: Event, newValue: number | number[]) => {
-    setCharLength(newValue as number);
+    setState(newValue as number);
   };
 
   return (

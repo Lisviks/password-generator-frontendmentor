@@ -6,6 +6,7 @@ import PasswordOption from './PasswordOption';
 import React, { useState } from 'react';
 
 export default function Form() {
+  const [charLength, setCharLength] = useState(10);
   const [uppercase, setUppercase] = useState(true);
   const [lowercase, setLowercase] = useState(true);
   const [number, setNumber] = useState(true);
@@ -17,7 +18,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <CharLength />
+      <CharLength charLength={charLength} setState={setCharLength} />
       <PasswordOption text='Include Uppercase Letters' checked={uppercase} setState={setUppercase} />
       <PasswordOption text='Include Lowercase Letters' checked={lowercase} setState={setLowercase} />
       <PasswordOption text='Include Numbers' checked={number} setState={setNumber} />
