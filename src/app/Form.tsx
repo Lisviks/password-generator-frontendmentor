@@ -50,7 +50,7 @@ export default function Form({ setPassword }: Props) {
       password += charsToUse[randomNumber];
     }
 
-    if (!uppercase || !lowercase || !number || !symbol) return setPassword('');
+    if (!uppercase && !lowercase && !number && !symbol) return setPassword('');
 
     setPassword(password);
   };
