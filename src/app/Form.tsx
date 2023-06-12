@@ -3,9 +3,13 @@
 import IconArrowRight from './IconArrowRight';
 import CharLength from './CharLength';
 import PasswordOption from './PasswordOption';
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
-export default function Form() {
+interface Props {
+  setPassword: Dispatch<SetStateAction<string>>;
+}
+
+export default function Form({ setPassword }: Props) {
   const [charLength, setCharLength] = useState(10);
   const [uppercase, setUppercase] = useState(true);
   const [lowercase, setLowercase] = useState(true);
@@ -32,6 +36,21 @@ export default function Form() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const charsToUse: string[] = [];
+    let password = '';
+
+    if (uppercase) charsToUse.push(...uppercaseLetters);
+    if (lowercase) charsToUse.push(...lowercaseLetters);
+    if (number) charsToUse.push(...numbers);
+    if (symbol) charsToUse.push(...symbols);
+
+    for (let i = 0; i < charLength; i++) {
+      const randomNumber = Math.floor(Math.random() * charsToUse.length);
+      password += charsToUse[randomNumber];
+    }
+
+    setPassword(password);
   };
 
   return (
