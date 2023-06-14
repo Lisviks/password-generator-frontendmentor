@@ -9,12 +9,15 @@ interface Props {
   setPassword: Dispatch<SetStateAction<string>>;
 }
 
+type PasswordStrenth = '' | 'too weak!' | 'weak' | 'medium' | 'strong';
+
 export default function Form({ setPassword }: Props) {
   const [charLength, setCharLength] = useState(10);
   const [uppercase, setUppercase] = useState(true);
   const [lowercase, setLowercase] = useState(true);
   const [number, setNumber] = useState(true);
   const [symbol, setSymbol] = useState(true);
+  const [strength, setStrength] = useState<PasswordStrenth>('');
 
   const [uppercaseLetters, setUppercaseLetters] = useState<string[]>([]);
   const [lowercaseLetters, setLowercaseLetters] = useState<string[]>([]);
@@ -33,6 +36,13 @@ export default function Form({ setPassword }: Props) {
     setUppercaseLetters(upLetters);
     setLowercaseLetters(lowLetters);
   }, []);
+
+  useEffect(() => {
+    if (charLength <= 5) setStrength('too weak!');
+    if (charLength > 5 && charLength <= 12) setStrength('weak');
+    if (charLength > 12 && charLength <= 20) setStrength('medium');
+    if (charLength > 20) setStrength('strong');
+  }, [charLength]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,8 +74,8 @@ export default function Form({ setPassword }: Props) {
       <PasswordOption text='Include Symbols' checked={symbol} setState={setSymbol} />
       <div className='strength'>
         <p>Strength</p>
-        <div className='medium'>
-          Medium
+        <div className={strength === 'too weak!' ? 'too-weak' : strength}>
+          {strength}
           <p>
             <span></span>
             <span></span>
