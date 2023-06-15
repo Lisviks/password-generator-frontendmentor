@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [URL]()
+- Solution URL: [URL](https://www.frontendmentor.io/solutions/password-generator--2mx7qLy2r)
 - Live Site URL: [URL](https://password-generator-frontendmentor-gamma.vercel.app/)
 
 ## My process
